@@ -1,0 +1,32 @@
+@import 'color'
+.form
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 8px
+    label
+        font-size: 10px
+        width: 100%
+        color: $primary-10
+    input:not([type=checkbox],[type=radio]),select
+        height: 35px
+        border: 1px solid $primary-03
+        border-radius: 2px
+        outline: none
+        width: 100%
+        font-size: 16px
+        padding: 4px
+    &.center
+        input:not([type=checkbox],[type=radio]),select
+            text-align: center
+.form_button
+    @include flexdefault
+    align-items: flex-end
+    height: 46px
+    button
+        outline: none
+        border: none
+        height: 35px
+        min-width: 35px
+        box-shadow: inset -1px -1px 2px $black-04
+        border-radius: 2px
+        cursor: pointer

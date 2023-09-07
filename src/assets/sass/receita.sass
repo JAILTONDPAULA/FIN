@@ -1,0 +1,26 @@
+@import 'color'
+@import 'main'
+@import 'mixin'
+@import 'titulo'
+@import 'form'
+@import 'button'
+// // *** *** *** *** // //
+form#receita
+    margin: 16px
+    padding: 16px 200px
+    background: $white-10
+    border-radius: 4px
+    box-shadow: 2px 2px 4px $neutral-02
+    @include flexdefault
+    .col
+        width: 15.83%
+    .col-2
+        width: 32.66%
+    .col-3
+        width: 49.49%
+    .col-4
+        width: 66.32%
+    .col-5
+        width: 83.15%
+    >*:last-child
+        margin-left: auto

@@ -1,0 +1,17 @@
+{
+    "name": "yellow-eyes/fin",
+    "description": "Gest\u0000o pessoal de gasto",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "YellowEyes\\Fin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "D'Paula - CASA",
+            "email": "jailton.viana2@hotmail.com"
+        }
+    ],
+    "require": {}
+}
