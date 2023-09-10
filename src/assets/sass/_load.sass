@@ -1,0 +1,23 @@
+@keyframes load
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(360deg)     
+section#load
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: $white-10
+    z-index: 15
+    @include center
+    display: none
+    >div
+        width: 32px
+        height: 32px
+        animation-name: load
+        animation-duration: .5s
+        animation-timing-function: linear
+        animation-iteration-count: infinite
+        background-image: url('/image/loading.png')

@@ -4,6 +4,9 @@
 @import 'titulo'
 @import 'form'
 @import 'button'
+@import 'load'
+@import 'mesage'
+// // *** *** *** *** // //
 // // *** *** *** *** // //
 form#receita
     margin: 16px
@@ -22,5 +25,52 @@ form#receita
         width: 66.32%
     .col-5
         width: 83.15%
+    .col-6
+        width: 100%
     >*:last-child
         margin-left: auto
+div#receitas
+    margin: 16px
+    background: $white-10
+    border-radius: 4px
+    box-shadow: 2px 2px 4px $neutral-02
+    padding: 16px 200px
+    table
+        width: 100%
+        border: 1px solid $primary-04
+        tr
+            display: flex
+            width: 100%
+            &.up
+                background: $secondary-03
+            &:hover
+                background: $primary-03
+            th,td
+                width: 15%
+                height: 40px
+                display: flex
+                align-items: center
+                padding: 4px
+                &:nth-child(1)
+                    width: 35%
+                &:last-child
+                    width: 5%
+                &.center
+                    justify-content: center
+                &.link
+                    color: $primary-04
+                    &:hover
+                        background: $primary-04
+                        color: $white-10
+            th
+                font-size: 12px
+                background: $primary-04
+                color: $white-10
+                justify-content: center
+                font-weight: 500
+            td
+                font-size: 11px
+                    
+
+
+
