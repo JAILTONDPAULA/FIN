@@ -1,0 +1,27 @@
+#modalDefault
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: $white-02
+    @include center
+    backdrop-filter: blur(5px)
+    z-index: 5
+    display: none
+    form
+        min-width: 35vw
+        box-shadow: 2px 2px 4px $neutral-02
+        border-radius: 4px
+        position: fixed
+        background: $white-10
+        transform: scale(0)
+        transition: transform .2s
+        >i
+            position: absolute
+            right: 16px
+            top: 16px
+            cursor: pointer
+            color: $black-02
+            &:hover
+                color: $error-04

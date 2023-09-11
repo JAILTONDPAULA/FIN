@@ -17,7 +17,7 @@ const request = function({url,data=null,method='get',start=true,callback=null}){
         },
         error(){
             $('#load').hide()
-            alert('ERROR')
+            Util.mensagem('Error inesperado','ERROR')
         }
     })
 }

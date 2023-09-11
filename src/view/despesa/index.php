@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RECEITA</title>
+    <title>DESPESA</title>
     <link rel="stylesheet" href="/css/receita/style.min.css">
     <script src="/js/jquery.v3.7.1.min.js" defer></script>
     <script src="/js/jquery.mask.js" defer></script>
@@ -25,17 +25,21 @@
           <button type="button" class="ok">CADASTRAR</button>
      </section>
      <div id="receitas">
-          <h6 class="titulo">RECEITAS</h6>
+          <h6 class="titulo">DESPESAS</h6>
           <section class="valor total">
                <p>R$ 20.000,00</p>
           </section>
           <table>
                <tr class="cabecalho">
-                    <th>ORIGEM</th>
-                    <th>VALOR</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>MARCA</th>
+                    <th>QUANTIDADE</th>
+                    <th>UNIDADE</th>
+                    <th>VALOR UNITÁRIO</th>
+                    <th>VALOR TOTAL</th>
                     <th>DATA</th>
                     <th>ANO/MÊS</th>
-                    <th>ENTRADA MENSAL</th>
+                    <th>PARCELADO</th>
                     <th></th>
                     <th></th>
                     <th></th>

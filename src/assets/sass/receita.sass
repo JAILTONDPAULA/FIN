@@ -6,14 +6,94 @@
 @import 'button'
 @import 'load'
 @import 'mesage'
+@import 'modal'
 // // *** *** *** *** // //
+.menu
+    height: 50px
+    @include flexdefault
+    gap: 0
+    background: $primary-04
+    color: $white-10
+    >div
+        height: 50px
+        width: 100px
+        padding: 8px
+        @include center
+    i
+        width: 40px
+        height: 50px
+        @include center
+    ul
+        height: 50px
+        width: calc(100% - 140px)
+        @include flexdefault
+        align-items: center
+        gap: 0
+        li
+            list-style: none
+            height: 24px
+            width: 100px
+            @include center
+            font-size: 11px
+            font-weight: 600
+            border-right: 2px solid $secondary-02
+            margin: 13px 0
+            transition: .3s
+            cursor: pointer
+            a
+                width: 100%
+                height: 100%
+                @include center
+                text-decoration: none
+                color: $white-10
+            &:first-child
+                border-left: 2px solid $secondary-02
+            &:hover
+                background: $white-10
+                a
+                    color: $primary-04
+// // *** *** *** *** // //
+#modalDefault #apagar
+    min-width: 20vw
+    width: 20vw
+    border-radius: 16px
+    overflow: hidden
+    border: 1px solid $error-05
+    h6
+        @include center
+        padding: 16px
+        font-size: 12px
+        // background: $secondary-03
+        background: $error-05
+        color: $white-10
+    p
+        padding: 8px
+        white-space: pre-wrap
+        font-size: 11px
+        overflow-y: auto
+    >div
+        @include flexdefault
+        justify-content: center
+        padding: 16px
+        button
+            width: 100px
+            border: none
+            padding: 4px
+            cursor: pointer
+            background: $secondary-03
+            border-radius: 2px
+            &:hover
+                background: $secondary-04
+            &:last-child
+                background: $error-05
+                color: $white-10
+                &:hover
+                    background: $error-04
 // // *** *** *** *** // //
 form#receita
-    margin: 16px
-    padding: 16px 200px
+    width: 50vw
+    padding: 16px
     background: $white-10
-    border-radius: 4px
-    box-shadow: 2px 2px 4px $neutral-02
     @include flexdefault
     .col
         width: 15.83%
@@ -29,12 +109,32 @@ form#receita
         width: 100%
     >*:last-child
         margin-left: auto
+// // *** *** *** *** // //
+#adicionar
+    margin: 16px
+    background: $white-10
+    border-radius: 4px
+    box-shadow: 2px 2px 4px $neutral-02
+    padding: 16px 100px
+    button
+        height: 35px
+        width: 150px
+        border-radius: 2px
+// // *** *** *** *** // //
+.valor
+    margin: 16px 0
+    @include flexdefault
+    justify-content: flex-end
+    p
+        font-weight: 600
+        color: $primary-08
+// // *** *** *** *** // //
 div#receitas
     margin: 16px
     background: $white-10
     border-radius: 4px
     box-shadow: 2px 2px 4px $neutral-02
-    padding: 16px 200px
+    padding: 16px 100px
     table
         width: 100%
         border: 1px solid $primary-04
@@ -52,16 +152,25 @@ div#receitas
                 align-items: center
                 padding: 4px
                 &:nth-child(1)
-                    width: 35%
-                &:last-child
-                    width: 5%
+                    width: 28%
+                &:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3)
+                    width: 4%
+                    cursor: pointer
+                &:nth-last-child(1)
+                    color: $error-04
                 &.center
                     justify-content: center
                 &.link
                     color: $primary-04
+                    cursor: pointer
                     &:hover
                         background: $primary-04
                         color: $white-10
+                &.linkII
+                    color: $primary-04
+                    cursor: pointer
+                    &:hover
+                        color: $primary-06
             th
                 font-size: 12px
                 background: $primary-04
