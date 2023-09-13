@@ -1,0 +1,36 @@
+.styles
+    width: 100%
+    border: 1px solid $primary-04
+    tr
+        display: flex
+        width: 100%
+        &.up
+            background: $secondary-03
+        &:hover
+            background: $primary-03
+        th,td
+            height: 40px
+            display: flex
+            align-items: center
+            padding: 4px
+            &.center
+                justify-content: center
+            &.link
+                color: $primary-04
+                cursor: pointer
+                &:hover
+                    background: $primary-04
+                    color: $white-10
+            &.linkII
+                color: $primary-04
+                cursor: pointer
+                &:hover
+                    color: $primary-06
+        th
+            font-size: 12px
+            background: $primary-04
+            color: $white-10
+            justify-content: center
+            font-weight: 500
+        td
+            font-size: 11px

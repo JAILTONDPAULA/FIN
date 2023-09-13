@@ -1,0 +1,103 @@
+@import 'color'
+@import 'main'
+@import 'mixin'
+@import 'titulo'
+@import 'form'
+@import 'button'
+@import 'load'
+@import 'mesage'
+@import 'modal'
+@import 'menu'
+@import 'table'
+// // *** *** *** *** // //
+#modalDefault #apagar
+    min-width: 20vw
+    width: 20vw
+    border-radius: 16px
+    overflow: hidden
+    border: 1px solid $error-05
+    h6
+        @include center
+        padding: 16px
+        font-size: 12px
+        // background: $secondary-03
+        background: $error-05
+        color: $white-10
+    p
+        padding: 8px
+        white-space: pre-wrap
+        font-size: 11px
+        overflow-y: auto
+    >div
+        @include flexdefault
+        justify-content: center
+        padding: 16px
+        button
+            width: 100px
+            border: none
+            padding: 4px
+            cursor: pointer
+            background: $secondary-03
+            border-radius: 2px
+            &:hover
+                background: $secondary-04
+            &:last-child
+                background: $error-05
+                color: $white-10
+                &:hover
+                    background: $error-04
+// // *** *** *** *** // //
+form#pessoas
+    width: 30vw
+    background: $white-10
+    border-radius: 20px
+    overflow: hidden
+    h6
+        font-size: 16px
+        text-align: center
+        width: 100%
+        padding: 16px
+        background: $primary-04
+        color: $white-10
+        margin: 0
+    >div
+        @include flexdefault
+        padding: 16px
+        .form
+            width: 100%
+        button
+            padding: 8px
+// // *** *** *** *** // //
+.valor
+    margin: 16px 0
+    @include flexdefault
+    justify-content: flex-end
+    p
+        font-weight: 600
+        color: $primary-08
+// // *** *** *** *** // //
+div#pessoas
+    margin: 16px
+    background: $white-10
+    border-radius: 4px
+    box-shadow: 2px 2px 4px $neutral-02
+    padding: 16px 100px
+    table
+        tr
+            th,td
+                width: 45%
+                &:nth-last-child(1),&:nth-last-child(2)
+                    width: 5%
+                    cursor: pointer
+                &:nth-last-child(1)
+                    color: $error-04
+    button
+        margin-top: 16px
+        height: 35px
+        width: 35px
+        border-radius: 50%
+        @include center
+                
+
+
+

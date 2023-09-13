@@ -15,9 +15,10 @@ const request = function({url,data=null,method='get',start=true,callback=null}){
                 callback ? callback(r.cod) : $('#load').hide()
             }
         },
-        error(){
+        error(a,b,c){
             $('#load').hide()
-            Util.mensagem('Error inesperado','ERROR')
+            const msg = a.responseJSON?a.responseJSON.mesage:'Error inesperado'
+            Util.mensagem(msg,'ERROR')
         }
     })
 }

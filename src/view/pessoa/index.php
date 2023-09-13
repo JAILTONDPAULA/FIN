@@ -3,34 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DESPESA</title>
-    <link rel="stylesheet" href="/css/despesa/style.min.css">
+    <title>PESSOAS</title>
+    <link rel="stylesheet" href="/css/pessoa/style.min.css">
     <script src="/js/jquery.v3.7.1.min.js" defer></script>
     <script src="/js/jquery.mask.js" defer></script>
-    <script src="/js/despesa.min.js" defer></script>
+    <script src="/js/pessoa.min.js" defer></script>
 </head>
 <body>
      <?php require_once(__DIR__.'/../../assets/template/load.php'); ?>
      <?php require_once(__DIR__.'/../../assets/template/mesage.php'); ?>
      <?php require_once(__DIR__.'/../../assets/template/modal.php'); ?>
      <?php require_once(__DIR__.'/../../assets/template/menu.php'); ?>
-     <div id="receitas">
-          <h6 class="titulo">DESPESAS</h6>
-          <section class="valor total">
-               <p>R$ 0,00</p>
-          </section>
-          <table>
+     <div id="pessoas">
+          <h6 class="titulo">PESSOAS CADASTRADAS</h6>
+          <section class="valor total"><p>0</p></section>
+          <table class="styles">
                <tr class="cabecalho">
-                    <th>DESCRIÇÃO</th>
-                    <th>MARCA</th>
-                    <th>QUANTIDADE</th>
-                    <th>UNIDADE</th>
-                    <th>VALOR UNITÁRIO</th>
-                    <th>VALOR TOTAL</th>
-                    <th>DATA</th>
-                    <th>ANO/MÊS</th>
-                    <th>PARCELADO</th>
-                    <th></th>
+                    <th>NOME</th>
+                    <th>PARENTESCO</th>
                     <th></th>
                     <th></th>
                </tr>

@@ -5,7 +5,7 @@ class Util{
 
     static mensagem(mensagem,titulo){
         $('#mensagem').find('h6').text(titulo)
-        $('#mensagem').find('p').text(mensagem)
+        $('#mensagem').find('p').html(mensagem)
         $('#mensagem').css({display:'flex'})
         setTimeout(_=>{
             $('#mensagem').find('div').slideDown(300)
