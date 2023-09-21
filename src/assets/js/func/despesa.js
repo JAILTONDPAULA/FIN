@@ -42,7 +42,7 @@ const adicionar = function(){
             $('#receita').off('submit').on({submit:salvar})
             $('textarea').on('paste input',Util.contador)
             $('#valor').mask('9.999.990,00',{reverse:true})
-            buscarOrigem()
+            // buscarDespesa()
         }
         Modal.open({id:'receita',html,callback})
     })
@@ -68,12 +68,28 @@ const apagarReceita = function(e){
 
 }
 
-const buscarOrigem = function(){
+const buscarDespesa = function(){
     const callback = function(r){
         const code = r.map((t,i)=>`<option value="${t}">${t}</option>`).join('')
-        $('#list_origem').html(code)
+        $('datalist#despesas').html(code)
     }
-    request({url:'http://localhost:84/origem-receitas/descricao',callback,start:false})
+    request({url:'http://localhost:84/custos/descricao',callback,start:false})
+}
+
+const buscarTipos = function(){
+    const callback = function(r){
+        const code = r.map((t,i)=>`<option value="${t}">${t}</option>`).join('')
+        $('datalist#tipos').html(code)
+    }
+    request({url:'http://localhost:84/tipos/descricao',callback,start:false})
+}
+
+const buscarMarcas = function(){
+    const callback = function(r){
+        const code = r.map((t,i)=>`<option value="${t}">${t}</option>`).join('')
+        $('datalist#marcas').html(code)
+    }
+    request({url:'http://localhost:84/marcas/descricao',callback,start:false})
 }
 
 const salvar = function(e){
